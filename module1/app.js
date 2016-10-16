@@ -11,7 +11,6 @@ function MsgController($scope) {
   $scope.lunch = ""
 
   $scope.sayLunchMessage = function (count) {
-    console.log('rhs debug the arraycount is :' + count);
 
     if (count == 0) {
       return "Please enter data first.";
@@ -23,14 +22,10 @@ function MsgController($scope) {
   };
 
   $scope.parseLunch = function () {
-    // this is where you parse and count the var passed
-    // console.log("Your lunch is..." + $scope.lunch);
 
     if ($scope.lunch.length == 0) {
         $scope.count = 0;
     } else {
-       console.log("This is the lenght of the string entered:" + $scope.lunch.length);
-       console.log("Your lunch is..." + $scope.lunch);
        var arrayOfStrings = $scope.lunch.split(',');
        $scope.count = arrayOfStrings.length;
     }

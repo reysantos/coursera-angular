@@ -1,0 +1,7 @@
+
+<ol>
+    <li ng-repeat="found in narrowitdown.founditems">
+      {{ found.itemName }} : {{ found.itemShortName}} : {{ found.itemDescription}}
+    <button class="btn btn-default"><span class="glyphicon glyphicon-ok" ng-click="narrowitdown.onRemove({index: $index});">Don't want this one!</button>
+  </li>
+</ol>

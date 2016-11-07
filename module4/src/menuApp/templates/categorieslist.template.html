@@ -1,0 +1,8 @@
+<a ui-sref="tab1">Home</a> &lt;
+<a ui-sref="tab2">Category List</a>
+
+<ul>
+  <li ng-repeat="category in $ctrl.categories"  ui-sref="tab3({itemId: category.short_name})">
+    {{ category.name }} | ({{ category.short_name }})
+  </li>
+</ul>

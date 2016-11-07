@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app="MenuApp">
+
+<!-- Submitted by Reynaldo Santos  -->
+
+<head>
+    <title>MenuApp - Assignment 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+    <h3> Welcome to our Restaurant </h3>
+    <!-- Libraries -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <!-- Modules -->
+
+    <script src="src/menuApp/menuapp.module.js"></script>
+    <script src="src/menuApp/data.module.js"></script>
+
+    <!-- Routes -->
+    <script src="src/menuApp/routes.js"></script>
+
+    <!-- 'menuApp' module artifacts -->
+    <script src="src/menuApp/categories.component.js"></script>
+    <script src="src/menuApp/items.component.js"></script>
+    <script src="src/menuApp/menudata.service.js"></script>
+    <script src="src/menuApp/main-categorieslist.controller.js"></script>
+    <script src="src/menuApp/main-itemslist.controller.js"></script>
+
+
+    <div class="tabs">
+
+    </div>
+
+    <ui-view></ui-view>
+
+</body>
+
+</html>

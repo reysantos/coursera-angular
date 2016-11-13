@@ -1,0 +1,49 @@
+<div class="container">
+    <h2 id="menu-categories-title" class="text-center">Please Sign Up to Register</h2>
+    <div class="text-center">
+        Your personal info will only be used to improve our services and will not be shared to other vendors.
+    </div>
+ 
+    <form name='formName' novalidate>
+        <input type="text" name="firstname" placeholder="Firstname" ng-model="menuSignUp.firstname" required min-length="4">
+        <span ng-if="formName.firstname.$error.required && formName.firstname.$touched">
+      First Name is required
+       </span>
+        <br>
+        <input type="text" name="lastname" placeholder="Lastname" ng-model="menuSignUp.lastname" required min-length="4">
+        <span ng-if="formName.lastname.$error.required && formName.lastname.$touched">
+      Last Name is required
+       </span>
+        <br>
+
+        <input type="email" name="email" placeholder="Email" ng-model="menuSignUp.email" required>
+        <span ng-if="formName.email.$invalid && formName.email.$touched">
+          Must be a valid email address: handle@domain format
+        </span>
+        <br>
+
+        <input type="text" name="phone" placeholder="Phone ###-###-####" ng-model="menuSignUp.phone" pattern="(\d{3})-(\d{3})-(\d{4})">
+        <span ng-if="formName.phone.$invalid && formName.phone.$touched">
+          Phone must be in the format ###-###-####.
+        </span>
+        <br>
+
+        <input type="text" name="menuitem" placeholder="Favorite Menu Item" ng-model="menuSignUp.menuitem" required min-length="2">
+        <span ng-if="formName.menuitem.$error.required && formName.menuitem.$touched">
+            Menu Item is required
+       </span>
+        <br>
+
+        <br>
+        <button ng-disabled="formName.$invalid" ng-click="menuSignUp.submit()">
+      Submit
+    </button>
+
+        <br>
+        <h3>{{ menuSignUp.message }}</h3>
+
+    </form>
+
+
+
+</div>
